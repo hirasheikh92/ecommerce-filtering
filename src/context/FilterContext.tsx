@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState } from "react";
 
 interface FilterContextType {
   searchQuery: string;
@@ -15,7 +15,7 @@ interface FilterContextType {
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);
 
-export const FilterProvider: React.FC<{ children: ReactNode }> = ({
+export const FilterProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
